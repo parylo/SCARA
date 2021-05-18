@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: scara_description_pkg
+    relative_path: urdf/scara.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/scara.srdf
+  CONFIG:
+    author_name: Patryk Parylo
+    author_email: todo@gmail.com
+    generated_timestamp: 1620668465

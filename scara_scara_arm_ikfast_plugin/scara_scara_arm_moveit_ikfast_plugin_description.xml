@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<library path="lib/libscara_scara_arm_moveit_ikfast_plugin">
+  <class base_class_type="kinematics::KinematicsBase" name="scara_scara_arm/IKFastKinematicsPlugin" type="scara_scara_arm::IKFastKinematicsPlugin">
+    <description>IKFast61 plugin for closed-form kinematics of scara scara_arm</description>
+  </class>
+</library>

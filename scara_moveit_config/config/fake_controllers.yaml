@@ -1,0 +1,9 @@
+controller_list:
+  - name: fake_scara_arm_controller
+    joints:
+      - Slider1
+      - Rev2
+      - Rev3
+initial:  # Define initial robot poses.
+  - group: scara_arm
+    pose: home
