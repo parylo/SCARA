@@ -122,7 +122,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QLabel" name="Y_current_pos">
+        <widget class="QLabel" name="y_current_pos">
          <property name="text">
           <string>0</string>
          </property>
@@ -132,7 +132,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLabel" name="X_current_pos">
+        <widget class="QLabel" name="x_current_pos">
          <property name="text">
           <string>0</string>
          </property>
@@ -169,7 +169,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLabel" name="Z_current_pos">
+        <widget class="QLabel" name="z_current_pos">
          <property name="text">
           <string>0</string>
          </property>
@@ -185,10 +185,10 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>280</x>
       <y>10</y>
-      <width>160</width>
-      <height>90</height>
+      <width>241</width>
+      <height>101</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -201,17 +201,10 @@
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout_4">
-       <item row="1" column="2">
-        <widget class="QLabel" name="Rev1_value">
+       <item row="1" column="3">
+        <widget class="QLabel" name="rev1_current_val">
          <property name="text">
           <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSlider" name="horizontalSlider">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
          </property>
         </widget>
        </item>
@@ -222,15 +215,44 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="Slider_value">
+       <item row="0" column="3">
+        <widget class="QLabel" name="slider_current_val">
          <property name="text">
           <string>0</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
-        <widget class="QSlider" name="horizontalSlider_2">
+       <item row="2" column="2">
+        <widget class="QSlider" name="rev2_slider">
+         <property name="maximum">
+          <number>140</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSlider" name="rev1_slider">
+         <property name="minimum">
+          <number>-120</number>
+         </property>
+         <property name="maximum">
+          <number>120</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QSlider" name="slider_slider">
+         <property name="minimum">
+          <number>80</number>
+         </property>
+         <property name="maximum">
+          <number>310</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -243,8 +265,8 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="2">
-        <widget class="QLabel" name="Rev2_value">
+       <item row="2" column="3">
+        <widget class="QLabel" name="rev2_current_val">
          <property name="text">
           <string>0</string>
          </property>
@@ -258,9 +280,23 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QSlider" name="horizontalSlider_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>[mm]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>[deg]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>[deg]</string>
          </property>
         </widget>
        </item>
@@ -299,8 +335,8 @@
      <rect>
       <x>40</x>
       <y>310</y>
-      <width>271</width>
-      <height>101</height>
+      <width>472</width>
+      <height>110</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -451,7 +487,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>110</y>
+      <y>120</y>
       <width>481</width>
       <height>16</height>
      </rect>
@@ -466,6 +502,19 @@
       <x>40</x>
       <y>290</y>
       <width>491</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="horizontalScrollBar">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>520</y>
+      <width>160</width>
       <height>16</height>
      </rect>
     </property>
