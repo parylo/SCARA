@@ -28,6 +28,8 @@ Graphic representation of information flow:
 
 In RViz current position of the robot is represented by colored links. The orange structure represents the target position of manipulator links. It can be changed by dragging the end-effector to the desired position. After this path can be planned and executed. Home and random valid positions can be also selected via a drop-down list.
 
+**[Demo Video (YouTube)](https://youtu.be/MqDa4g5WqWI)**
+
 ## GUI
 GUI is created with PyQt library (including Qt Designer).
 
@@ -41,6 +43,7 @@ Initial basic version:
 4. User can move end-effector to specific direction with distance specified by radio buttons.
 5. HOME button set manipulator to predefined home position. GRIPPER button activates and deactivate the gripper tool. 
 
+**[Demo Video (YouTube)](https://youtu.be/WDLDMQaBE6g)**
 
 ## Vision System
 *TO DO
