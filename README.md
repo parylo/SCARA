@@ -11,6 +11,8 @@
 
 ## General info
 
+HW information: [Scara ROS Project](https://pparylo.wixsite.com/projects/scara-ros-project)
+
 Basic assumptions:
 - Inverse kinematic and collision detection handle by MoveIt
 - HW (actuators, gripper pump and valve, camera LEDs) controlled by SW on Arduino
@@ -20,24 +22,33 @@ Basic assumptions:
 ## Interfaces
 Graphic representation of information flow:
 
-In progress...
+*TO DO 
 ## RViz representation
-![RViz.png](/RViz.png)
+<img src="/RViz.png" height="500"/>
 
 In RViz current position of the robot is represented by colored links. The orange structure represents the target position of manipulator links. It can be changed by dragging the end-effector to the desired position. After this path can be planned and executed. Home and random valid positions can be also selected via a drop-down list.
+
+**[Demo Video (YouTube)](https://youtu.be/MqDa4g5WqWI)**
 
 ## GUI
 GUI is created with PyQt library (including Qt Designer).
 
 Initial basic version:
-![GUI.png](/GUI.png)
 
-Not all functions are implemented and tested yet. So far reading the current XYZ position of end-effector and moving to desired end-effector position is working correctly. 
+<img src="/GUI.png" height="500"/>
+
+1. Current XYZ position of end-effector (gripper).
+2. Current joints position. Users can grab a slider to set join to a certain angle or distance. After slider release, the joint will move to a set position.
+3. User can input end-effector XYZ coordinates. After clicking MOVE button, the manipulator will move end-effector to the desired position.
+4. User can move end-effector to specific direction with distance specified by radio buttons.
+5. HOME button set manipulator to predefined home position. GRIPPER button activates and deactivate the gripper tool. 
+
+**[Demo Video (YouTube)](https://youtu.be/WDLDMQaBE6g)**
 
 ## Vision System
-In progress...
+*TO DO
 ## Object Recognition
-In progress...
+*TO DO
 ## Folders description
 ### scara_moveit
 It is the main package of this project. It contains scripts to convert joint coordinates, GUI files, and Arduino microcontroller files.
