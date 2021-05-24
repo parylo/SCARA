@@ -6,8 +6,8 @@ from PyQt5.uic import loadUi
 import rospy
 import moveit_commander
 from geometry_msgs.msg import Pose
+from std_msgs.msg import Bool
 
-import time
 import math
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -21,10 +21,13 @@ class MainWindow(QtWidgets.QMainWindow):
 		self.scene = moveit_commander.PlanningSceneInterface()
 		self.group = moveit_commander.MoveGroupCommander('scara_arm')
 
+		# ROS
+		self.gripper_state_pub = rospy.Publisher('/gripper_state', Bool, queue_size=1)
+
 		# Buttons
 		self.move_button.clicked.connect(self.move_to_XYZ)
 		self.home_button.clicked.connect(self.home_action)
-		# self.gripper_button.clicked.connect(self.gripper_action)
+		self.gripper_button.clicked.connect(self.gripper_action)
 		
 
 		self.xplus_button.clicked.connect(lambda: self.move_to_direction('x'))
@@ -184,9 +187,22 @@ class MainWindow(QtWidgets.QMainWindow):
 		self.group.set_named_target("home")
 		self.group.go()
 
-	# def gripper_action(self):
+	def gripper_action(self, button_state):
+		'''Based on GRIPPER button state, publish gripper command On (True) or Off (False) on gripper state topic.'''
 
-		#TO DO
+		gripper_state = Bool()
+
+		if self.gripper_button.isChecked():
+
+			gripper_state.data = True
+			print('Gripper ON')
+
+		else:
+
+			gripper_state.data = False
+			print('Gripper OFF')
+
+		self.gripper_state_pub.publish(gripper_state)
 		
 
 if __name__ == '__main__':

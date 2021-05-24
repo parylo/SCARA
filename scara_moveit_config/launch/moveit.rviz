@@ -8,6 +8,8 @@ Panels:
         - /MotionPlanning1/Scene Robot1
         - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
+        - /RobotModel1
+        - /RobotModel1/Links1/link31
       Splitter Ratio: 0.7425600290298462
     Tree Height: 245
   - Class: rviz/Help
@@ -124,7 +126,7 @@ Visualization Manager:
         Interactive Marker Size: 0.05000000074505806
         Joint Violation Color: 255; 0; 255
         Planning Group: scara_arm
-        Query Goal State: true
+        Query Goal State: false
         Query Start State: false
         Show Workspace: false
         Start State Alpha: 0
@@ -233,7 +235,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 0.772659182548523
+      Distance: 1.7755024433135986
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -241,17 +243,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.35231202840805054
-        Y: 0.09120206534862518
-        Z: 1.9371567816506285e-07
+        X: 0.0002352893352508545
+        Y: 0.001613769680261612
+        Z: 2.2351798634190345e-07
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.0597968101501465
+      Pitch: 0.37520334124565125
       Target Frame: base_link
-      Yaw: 3.1467652320861816
+      Yaw: 0.16171853244304657
     Saved: ~
 Window Geometry:
   Displays:

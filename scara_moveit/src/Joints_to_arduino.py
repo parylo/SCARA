@@ -18,7 +18,7 @@ class JointPositionsSender(object):
         '''
         positions = Floats()
 
-        positions.data.append(msg.position[0])
+        positions.data.append(msg.position[0]*1000)
         positions.data.append(math.degrees(msg.position[1]))
         positions.data.append(math.degrees(msg.position[2]))
 
