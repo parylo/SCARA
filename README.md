@@ -22,9 +22,10 @@ Basic assumptions:
 ## Interfaces
 Graphic representation of information flow:
 
-*TO DO 
+<img src="/Interfaces.png" height="700"/>
+
 ## RViz representation
-<img src="/RViz.png" height="500"/>
+<img src="/RViz.png" height="600"/>
 
 In RViz current position of the robot is represented by colored links. The orange structure represents the target position of manipulator links. It can be changed by dragging the end-effector to the desired position. After this path can be planned and executed. Home and random valid positions can be also selected via a drop-down list.
 
@@ -35,7 +36,7 @@ GUI is created with PyQt library (including Qt Designer).
 
 Initial basic version:
 
-<img src="/GUI.png" height="500"/>
+<img src="/GUI.png" height="600"/>
 
 1. Current XYZ position of end-effector (gripper).
 2. Current joints position. Users can grab a slider to set join to a certain angle or distance. After slider release, the joint will move to a set position.
